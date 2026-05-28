@@ -30,9 +30,6 @@ jobs:
           version: 9
           run_install: false
 
-      - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
-
       - name: Deploy Backend for ${{ github.ref_name }}
         run: |
           export use_worker_assets=${{ secrets.USE_WORKER_ASSETS }}
